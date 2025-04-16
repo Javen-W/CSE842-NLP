@@ -23,7 +23,7 @@ Implemented and evaluated sentiment analysis models on the Movie Reviews Sentime
   - Built a Naïve Bayes classifier using unigrams as features, processing punctuation as words.
   - Implemented 3-fold cross-validation, training on two folds and testing on the third per run.
   - Created a vocabulary from training data, computing `P(w|c)` and `P(c)` with Laplace smoothing (k=1) in log space.
-  - Trained using CLI command `train fold1 fold2`, saving model parameters (word and class probabilities) as pickled Pandas DataFrames (`zamojci1_params`).
+  - Trained using CLI command `train fold1 fold2`, saving model parameters (word and class probabilities) as pickled Pandas DataFrames (`zamojci1_params_pclass/pwords.pkl`).
   - Tested with `test fold3`, predicting document sentiment by summing log probabilities and comparing to ground truth.
   - Evaluated precision, recall, F1, and accuracy, averaging metrics across folds.
 - **Problem 2: NLTK & scikit-learn Models**:
@@ -58,7 +58,7 @@ Implemented and evaluated sentiment analysis models on the Movie Reviews Sentime
 - **Extra Experiments**:
   - SVM-TF-IDF with `max_df=0.7` outperformed baseline, reducing noise from frequent words.
   - Bigrams and character n-grams underperformed, confirming unigrams as optimal for this dataset.
-- **Output**: Saved model parameters (`zamojci1_params`) and evaluation metrics in report, with code files (`zamojci1_hw1p1.py`, `zamojci1_hw1p2_all.py`).
+- **Output**: Saved model parameters (`zamojci1_params_pclass/pwords.pkl`) and evaluation metrics in report, with code files (`zamojci1_hw1p1.py`, `zamojci1_hw1p2_all.py`).
 
 #### Key Skills
 - Custom NLP model development (Naïve Bayes).
@@ -110,6 +110,10 @@ Developed models for part-of-speech (POS) tagging using the Brown and Treebank c
   - All models scored >91%, with faster training (3 epochs vs. 100).
 - **Output**: Saved code (`zamojci1_hmm.ipynb`, `zamojci1_nn.ipynb`, `zamojci1_extra.ipynb`), matrices, and accuracy tables in report.
 
+![q1p1](https://github.com/user-attachments/assets/36264914-955b-4a34-818e-23a568642598)
+
+![q1p2](https://github.com/user-attachments/assets/9786da0c-5ebc-4288-ab91-d9408c8d0fb0)
+
 #### Key Skills
 - Probabilistic modeling (HMM).
 - Neural network design (RNN, LSTM).
@@ -152,13 +156,15 @@ Developed models for text classification, focusing on BERT fine-tuning and non-n
   - Accuracy: 60.50% (3 epochs, training loss=0.66, runtime=33,212s, FLOPs=3.97e16).
   - Underperformed tutorial’s BERT-base-cased, possibly due to model size or data subset.
 - **Problem 2: Non-Neural SVM**:
-  - **Iteration 1 (TF-IDF, Linear SVM)**: Best performer, outperformed SOTA non-neural models (metrics not specified in report, but noted as superior).
+  - **Iteration 1 (TF-IDF, Linear SVM)**: Best performer, outperformed SOTA non-neural models.
   - **Iteration 2 (Word2vec+PCA, Linear SVM)**: Lower performance, likely due to 10K sample limit.
   - **Iteration 3 (TF-IDF+Word2vec, RBF SVM)**: Improved over Iteration 2 but below Iteration 1, using 25K samples.
   - TF-IDF captured key patterns; word2vec struggled with small subsets.
 - **Problem 3: Fine-Tuned DistilBERT**:
   - Accuracy: 94.10%, significantly better than non-neural SVMs, aligning with SOTA BERT models.
 - **Output**: Saved code (`HW3_Q1.py`, `HW3_Q2.ipynb`, `HW3_Q3.ipynb`), training logs, and result tables in report.
+
+![Q3_model_summary](https://github.com/user-attachments/assets/80233bb0-ef02-4ad3-983b-638ab3542548)
 
 #### Key Skills
 - Transformer fine-tuning (DistilBERT).
