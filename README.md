@@ -60,6 +60,8 @@ Implemented and evaluated sentiment analysis models on the Movie Reviews Sentime
   - Bigrams and character n-grams underperformed, confirming unigrams as optimal for this dataset.
 - **Output**: Saved model parameters (`zamojci1_params_pclass/pwords.pkl`) and evaluation metrics in report, with code files (`zamojci1_hw1p1.py`, `zamojci1_hw1p2_all.py`).
 
+![image](https://github.com/user-attachments/assets/82b52f00-419e-489d-bcee-8fd7bdede60a)
+
 #### Key Skills
 - Custom NLP model development (Naïve Bayes).
 - Feature engineering (BoW, TF-IDF).
